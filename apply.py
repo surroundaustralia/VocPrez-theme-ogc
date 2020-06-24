@@ -1,7 +1,6 @@
 import errno
 from os.path import join, dirname
 import os
-import fileinput
 import shutil
 import glob
 
@@ -36,4 +35,3 @@ for filename in glob.glob(os.path.join(THIS_TEMPLATES, '*.*')):
 
 # configure config
 #
-

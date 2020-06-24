@@ -5,5 +5,5 @@
 .DS_Store
 
 # config
-_config/
+_config/__init__.py
 
