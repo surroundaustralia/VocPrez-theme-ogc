@@ -23,9 +23,9 @@ class VocabSource:
 
 # BEGIN Instance Vars
 DEBUG = True
-SPARQL_ENDPOINT = "http://replace_me.com/sparql"
-SPARQL_USERNAME = "replace_me"
-SPARQL_PASSWORD = "replace_me"
+SPARQL_ENDPOINT = ""
+SPARQL_USERNAME = ""
+SPARQL_PASSWORD = ""
 SOURCE_NAME = "ogc"
 # END Instance Vars
 
@@ -38,4 +38,8 @@ VOCAB_SOURCES = {
     },
 }
 
-
+# BEGIN Vocabs list info
+VOCS_TITLE = "OGC Vocabularies"
+VOCS_URI = "http://www.opengis.net/def/"
+VOCS_DESC = "Vocabularies managed and published by the Open Geospatial Consortium"
+# END Vocabs list info

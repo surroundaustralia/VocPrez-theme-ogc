@@ -1,0 +1,60 @@
+{% extends "page.html" %}
+
+<!-- Set list of predicates for display -->
+{% set displayed_relationships = [
+    'http://purl.org/dc/terms/created',
+    'http://purl.org/dc/terms/modified',
+    'http://www.w3.org/2004/02/skos/core#prefLabel',
+    'http://www.w3.org/2004/02/skos/core#altLabel',
+    'http://www.w3.org/2004/02/skos/core#definition',
+    'http://www.w3.org/2000/01/rdf-schema#comment',
+    'http://purl.org/dc/terms/source',
+    'http://purl.org/dc/terms/contributor',
+    'http://www.w3.org/2004/02/skos/core#exactMatch',
+    'http://www.w3.org/2004/02/skos/core#closeMatch',
+    'http://www.w3.org/2004/02/skos/core#broadMatch',
+    'http://www.w3.org/2004/02/skos/core#narrowMatch',
+    'http://www.w3.org/2004/02/skos/core#broader',
+    'http://www.w3.org/2004/02/skos/core#narrower'
+    ]         
+%}
+
+{% block content %}
+<h1>Concept</h1>
+<dl>
+  <dt>Preferred Label</dt>
+  <dd><h2>{{ concept.prefLabel }}</h2></dd>
+  <dt>URI</dt>
+  <dd><a href="{{ uri }}">{{ uri }}</a></dd>
+  {%  if vocab_uri is not none %}
+  <dt>Within Vocab</dt>
+  <dd><a href="{{ url_for('object', uri=vocab_uri) }}">{{ vocab_title }}</a></dd>
+  {% endif %}
+</dl>
+<table class="metadata concept">
+{% for relationship in displayed_relationships -%}
+    {% if concept.related_objects[relationship] and concept.related_objects[relationship]['objects'] -%}
+        <tr>
+            <th style="padding-right: 10px;"><a href="{{ relationship }}">{{concept.related_objects[relationship]['label']}}</a>:</th>
+            <td class="list">                 
+            {% for concept_uri, concept_label in concept.related_objects[relationship]['objects'].items() -%}
+	            {% if concept_uri and concept_label -%}
+            		{% if config.LOCAL_URLS -%}
+	                <a href="{{ url_for('object') }}?vocab_uri={{ vocab_uri }}&uri={{ utils.url_encode(concept_uri) }}">{{ concept_label }}</a><br>
+	            	{% else -%}
+	                <a href="{{ uri }}">{{ concept_label }}</a><br>
+	            	{% endif -%}
+	            {% else -%}
+	                {{ concept_uri }}<br>
+	            {% endif -%}
+            {% endfor -%}                   
+            </td>
+        </tr>
+    {% endif -%}
+{% endfor -%}
+</table>
+<div class="altprof">
+  <h3>Alternate Profiles</h3>
+  <p>Different views and formats of this concept are here: <a href="{{ uri }}&_profile=alt">Alternate Profiles</a>.</p>
+</div>
+{% endblock %}
