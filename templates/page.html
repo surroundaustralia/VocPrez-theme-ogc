@@ -208,6 +208,14 @@
         margin-bottom: 1px;
     }
 
+    table.layout {
+      border-collapse: collapse;
+    }
+
+    table.layout tbody tr:nth-child(even) {
+      background: #FFF
+    }
+
     .altprofiles {
         border: 1px solid #d0d0d0;
         box-shadow: 0 0 3px rgba(0,0,0,0.1);
@@ -350,7 +358,7 @@
   <div id="maingrid">
     <div id="vp-menu">
       <a href="{{ url_for('index') }}">VocPrez Home</a>
-      <a href="{{ url_for('about') }}">About</a>
+      <a href="{{ url_for('about') }}">About VocPrez</a>
       <a href="{{ url_for('sparql') }}">SPARQL</a>
       <a href="{{ url_for('vocabularies') }}">Vocabularies</a>
     </div>
