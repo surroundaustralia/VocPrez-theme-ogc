@@ -337,6 +337,70 @@
         overflow: hidden;
         background-color: #f1f1f1;
     }
+
+    .status {
+      font-style:         italic;
+      font-size:          1.25em;
+      display:            block;
+      width:              1000px;
+      padding:            10px;
+    }
+
+    {#<http://www.opengis.net/def/sensortype/community/hackair>#}
+    {#    <http://www.opengis.net/def/sensortype/community/hackair/sensors_mobile> na:status status:experimental .#}
+
+    {#<http://www.opengis.net/def/crs>#}
+    {#    <http://www.opengis.net/def/axis/OGC/0/days> na:status status:invalid .#}
+
+    {#<http://www.opengis.net/def/doc-type>#}
+    {#    <http://www.opengis.net/def/doc-type/atb> na:status status:retired .#}
+
+    {#<http://www.opengis.net/def/doc-type>#}
+    {#    <http://www.opengis.net/def/doc-type/as-draft> na:status status:superseded .#}
+
+    {#<http://www.opengis.net/def/waterml>#}
+    {#    <http://www.opengis.net/def/waterml/2.0/medium/SurfaceWater> na:status status:valid .#}
+
+    .experimental:before {
+      content: "EXPERIMENTAL - Concept is not valid";
+    }
+    .experimental {
+      border:             solid 1px rgb(255, 153, 0);
+      background-color:   rgba(255, 153, 0, 0.25);
+      color:              rgb(255, 153, 0);
+    }
+    .invalid:before {
+      content: "INVALID - Concept is not valid";
+    }
+    .invalid {
+      border:             solid 1px red;
+      background-color:   rgba(255, 0, 0, 0.25);
+      color:              red;
+    }
+    .retired:before {
+      content: "RETIRED - Concept is not valid";
+    }
+    .retired {
+      border:             solid 1px rgb(153, 51, 0);
+      background-color:   rgba(153, 51, 0, 0.25);
+      color:              rgb(153, 51, 0);
+    }
+    .superseded:before {
+      content: "SUPERCEDED - Concept is not valid";
+    }
+    .superseded {
+      border:             solid 1px rgb(153, 51, 0);
+      background-color:   rgba(153, 51, 0, 0.25);
+      color:              rgb(153, 51, 0);
+    }
+    .valid:before {
+      content: "VALID - Concept is valid";
+    }
+    .valid {
+      border:             solid 1px green;
+      background-color:   rgba(0, 255, 0, 0.25);
+      color:              green;
+    }
   </style>
 </head>
 <body>
