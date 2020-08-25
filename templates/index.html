@@ -1,4 +1,5 @@
 {% extends "page.html" %}
+{% from "_concept_hierarchy.html" import render_concept_hierarchy with context -%}
 
 {% block content %}
     <div style="text-align: center;">
@@ -6,15 +7,15 @@
             <img src="{{url_for('static', filename='VocPrez.svg')}}" style="width:150px;" alt="VocPrez logo">
         </a>
     </div>
-    <h4>Welcome to the OGC Definitions Server</h4>
-    <p>OGC publishes definitions using the <a href="https://www.w3.org/TR/skos-reference/">SKOS vocabulary</a> (or "taxonomy") model in both human- and machine-readable forms.</p>
+    <h1>Welcome to the OGC Definitions Server</h1>
+    <p>The OGC publishes definitions using the <a href="https://www.w3.org/TR/skos-reference/">SKOS vocabulary</a> (or "taxonomy") model in both human- and machine-readable forms.</p>
     <p>Some definitions have richer information models with alternative profiles of the content available.</p>
     <p>Vocabularies are managed in sets called "ConceptSchemes", and definitions can usually be accessed individually as "Concepts" or as a set.</p>
     <p>The "alternate profiles" will provide a complete list of the available resources per definition.<p>
     <p>See the <a href="http://ogc.org/defs-server">Definitions Server About Page</a> for more information about the OGC Definitions Server.</p>
-    <h2>Starting Points</h2>
-    <ul>
-        <li><a href="{{ url_for('vocabularies') }}">OGC Vocabularies</a></li>
-    </ul>
+    {% if hierarchy is not none %}
+      <h3>ConceptScheme Hierarchy</h3>
+      {{ render_concept_hierarchy(hierarchy)|safe }}
+    {% endif %}
     <p>See the VocPrez System's <a href="{{ url_for('about') }}">About page</a> for more information about it.</p>
 {% endblock %}
