@@ -14,7 +14,7 @@ start_line=$(grep -n "# ROUTE index" $VP_HOME/vocprez/app.py | head -n 1 | cut -
 start_line=$((start_line -1))
 head -$start_line $VP_HOME/vocprez/app.py > test.py
 
-more app_additions.py >> test.py
+cat app_additions.py >> test.py
 
 end_line=$(grep -n "# END ROUTE index" $VP_HOME/vocprez/app.py | head -n 1 | cut -d: -f1)
 end_line=$((end_line + 2))
