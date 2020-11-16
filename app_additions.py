@@ -266,7 +266,6 @@ def index():
 
     parent_child_label_list = []
     seen = {}
-    
     res = u.sparql_query(q)
     for r in res:
         p = str(r["parent"]["value"])
