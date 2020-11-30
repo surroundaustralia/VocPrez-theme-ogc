@@ -7,3 +7,4 @@
 # config
 _config/__init__.py
 
+.ENV
