@@ -95,7 +95,10 @@ def index():
 
         md = ""
         for i in hierarchical_list:
-            md += "{}* [{}]({})\n".format(i[1] * "    ", labels[i[0]], i[0])
+            if config.USE_SYSTEM_URIS:
+                md += "{}* [{}]({}{})\n".format(i[1] * "    ", labels[i[0]], config.SYSTEM_URI_BASE + "/object?url=", i[0])
+            else:
+                md += "{}* [{}]({})\n".format(i[1] * "    ", labels[i[0]], i[0])
 
         return bs4.BeautifulSoup(markdown.markdown(md), features="html.parser").prettify()
 
