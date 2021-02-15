@@ -23,7 +23,7 @@ body {
 
 #vocprez {
     position: fixed;
-    top: 230px;
+    top: 240px;
     left: -50px;
     font-size: small;
     transform: rotate(-90deg);
@@ -197,6 +197,10 @@ table.layout tbody tr:nth-child(even) {
   background: #FFF
 }
 
+table.metadata th,
+table.metadata td {
+    vertical-align: top;
+}
 #altprofiles,
 #filter {
     border: 1px solid #d0d0d0;
@@ -356,6 +360,7 @@ table.layout tbody tr:nth-child(even) {
   padding:            10px;
 }
 
+/*
 {#<http://www.opengis.net/def/sensortype/community/hackair>#}
 {#    <http://www.opengis.net/def/sensortype/community/hackair/sensors_mobile> na:status status:experimental .#}
 
@@ -370,6 +375,7 @@ table.layout tbody tr:nth-child(even) {
 
 {#<http://www.opengis.net/def/waterml>#}
 {#    <http://www.opengis.net/def/waterml/2.0/medium/SurfaceWater> na:status status:valid .#}
+*/
 
 .experimental:before {
   content: "EXPERIMENTAL - Concept is not valid";
@@ -410,4 +416,13 @@ table.layout tbody tr:nth-child(even) {
   border:             solid 1px green;
   background-color:   rgba(0, 255, 0, 0.25);
   color:              green;
+}
+
+.concept th {
+    text-align: left;
+    padding-right:5px;
+}
+
+td.list {
+    padding-left: 25px;
 }

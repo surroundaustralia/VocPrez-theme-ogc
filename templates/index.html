@@ -15,6 +15,7 @@
     <p>See the <a href="http://ogc.org/def-server">Definitions Server About Page</a> for more information about the OGC Definitions Server.</p>
     {% if hierarchy is not none %}
       <h3>ConceptScheme Hierarchy</h3>
+      <p><em>Click the carets next to each ConceptScheme to expand</em></p>
       {{ render_concept_hierarchy(hierarchy)|safe }}
     {% endif %}
     <p>See the VocPrez System's <a href="{{ url_for('about') }}">About page</a> for more information about it.</p>
