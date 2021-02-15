@@ -31,6 +31,7 @@ class VocabSource:
 # BEGIN Instance Vars
 SYSTEM_URI_BASE = "http://localhost:{}".format(PORT)
 USE_SYSTEM_URIS = True
+USE_ABS_ALT_URI = True
 DEBUG = True
 SPARQL_ENDPOINT = "$SPARQL_ENDPOINT"
 SPARQL_USERNAME = $SPARQL_USERNAME
