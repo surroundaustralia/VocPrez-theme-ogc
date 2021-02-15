@@ -201,7 +201,7 @@ table.metadata th,
 table.metadata td {
     vertical-align: top;
 }
-#altprofiles,
+.altprof,
 #filter {
     border: 1px solid #d0d0d0;
     box-shadow: 0 0 3px rgba(0,0,0,0.1);
@@ -209,9 +209,8 @@ table.metadata td {
     background-color: white;
     padding: 10px;
 }
-
-.altprof {
-  margin-top:40px;
+#filter input[text] {
+    width: 200px;
 }
 
 /*
