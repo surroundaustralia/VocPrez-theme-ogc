@@ -204,17 +204,14 @@ table.metadata td {
     vertical-align: top;
 }
 .altprof,
-#filter,
+.filter,
 .search {
     border: 1px solid #d0d0d0;
     box-shadow: 0 0 3px rgba(0,0,0,0.1);
     border-radius: 3px;
     background-color: white;
     padding: 10px;
-    margin-top:20px;
-}
-#filter input[text] {
-    width: 120px;
+    margin-bottom:20px;
 }
 
 /*
