@@ -25,7 +25,9 @@
     <div id="vp-menu">
       {% include 'nav.html' %}
     </div>
+    <div id="main" style="display:grid; grid-template-columns: 1fr 250px;">
       {% block content %}{% endblock %}
+    </div>
   </div>
   <div id="footerwhite"></div>
   <div id="footermain">
@@ -36,7 +38,6 @@
       <li><a href="https://www.ogc.org/pressroom">News &amp; Events</a></li>
       <li><a href="https://www.ogc.org/ogc/guidanceltr">Media Guidance</a></li>
     </ul>
-
     <div style="float:right; font-style:italic;">
       <img alt="OGC Logo white" style="width:200px;" src="{{ url_for('static', filename='OGC_Logo_2018-08-31_white.png') }}"/>
       <p>+1 508 655 5858</p>

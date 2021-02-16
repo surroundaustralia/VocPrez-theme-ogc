@@ -2,6 +2,7 @@
 {% from "_concept_hierarchy.html" import render_concept_hierarchy with context -%}
 
 {% block content %}
+  <div style="grid-row: 1/2;">
     <div style="text-align: center;">
         <a href="https://github.com/RDFlib/VocPrez">
             <img src="{{url_for('static', filename='VocPrez.svg')}}" style="width:150px;" alt="VocPrez logo">
@@ -19,4 +20,5 @@
       {{ render_concept_hierarchy(hierarchy)|safe }}
     {% endif %}
     <p>See <a href="{{ url_for('about') }}">About page</a> for more information about VocPrez.</p>
+  </div>
 {% endblock %}

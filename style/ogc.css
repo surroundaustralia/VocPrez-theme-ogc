@@ -83,7 +83,9 @@ div#maingrid {
 #vp-menu a {
     margin: 0 10px 0 10px;
 }
+#main {
 
+}
 div#footerwhite {
     grid-area: footerwhite;
     background-color: white;
@@ -209,10 +211,10 @@ table.metadata td {
     border-radius: 3px;
     background-color: white;
     padding: 10px;
-    width: 200px;
+    margin-top:20px;
 }
 #filter input[text] {
-    width: 150px;
+    width: 120px;
 }
 
 /*
