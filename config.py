@@ -29,7 +29,7 @@ class VocabSource:
 
 
 # BEGIN Instance Vars
-SYSTEM_URI_BASE = "http://localhost:{}".format(PORT)
+SYSTEM_URI_BASE = "http://def.opengis.net/vocprez"
 USE_SYSTEM_URIS = True
 USE_ABS_ALT_URI = True
 DEBUG = True
@@ -50,7 +50,7 @@ DATA_SOURCES = {
 }
 
 # BEGIN Vocabs list info
-VOCS_URI = "https://defs.opengeospatial.org"
+VOCS_URI = "http://www.opengis.net/def"
 VOCS_TITLE = "OGC Vocabularies"
-VOCS_DESC = "Vocabularies managed by the OGC"
+VOCS_DESC = "Definitions registered by OGC standardisation activities or hosted on behalf of related organisations."
 # END Vocabs list info
