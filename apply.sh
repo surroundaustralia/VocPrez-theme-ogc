@@ -1,6 +1,7 @@
 #set defaults to match OGC setup
 VP_THEME_HOME="${VP_THEME_HOME:-/var/www/vocprez_skin}"
 VP_HOME="${VP_HOME:-/var/www/vocprez}"
+SPARQL_ENDPOINT="{SPARQL_ENDPOINT:-http://localhost:8080/rdf4j-server/repositories/ogc-na}"
 
 # copy all style content to VP
 echo "copying $VP_THEME_HOME/style content to $VP_HOME/vocprez/view/style"
