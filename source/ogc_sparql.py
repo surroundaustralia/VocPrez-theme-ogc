@@ -53,7 +53,6 @@ class OGCSPARQL(SPARQL):
         found = False
         for r in u.sparql_query(q, config.SPARQL_ENDPOINT, config.SPARQL_USERNAME, config.SPARQL_PASSWORD):
             prop = r["p"]["value"]
-            print(prop)
             val = r["o"]["value"]
             found = True
             if val == "http://www.w3.org/2004/02/skos/core#Concept":
