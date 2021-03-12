@@ -29,7 +29,7 @@ class VocabSource:
 
 
 # BEGIN Instance Vars
-SYSTEM_URI_BASE = "http://def.opengis.net/vocprez"
+SYSTEM_URI_BASE = "http://defs.opengis.net/vocprez"
 USE_SYSTEM_URIS = True
 USE_ABS_ALT_URI = True
 DEBUG = True
