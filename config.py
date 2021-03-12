@@ -23,6 +23,7 @@ PORT = 5000
 class VocabSource:
     FILE = "FILE"
     SPARQL = "SPARQL"
+    OGCSPARQL = "OGCSPARQL"
     RVA = "RVA"
     VOCBENCH = "VOCBENCH"
     GITHUB = "GITHUB"
@@ -50,7 +51,7 @@ DATA_SOURCES = {
 }
 
 # BEGIN Vocabs list info
-VOCS_URI = "https://defs.opengeospatial.org"
+VOCS_URI = "http://www.opengis.net/def"
 VOCS_TITLE = "OGC Vocabularies"
-VOCS_DESC = "Vocabularies managed by the OGC"
+VOCS_DESC = "Definitions registered by OGC standardisation activities or hosted on behalf of related organisations."
 # END Vocabs list info
