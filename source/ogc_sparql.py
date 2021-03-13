@@ -25,18 +25,15 @@ class OGCSPARQL(SPARQL):
             WHERE {
                 <xxxx> a skos:Collection ;
                        ?p ?o .
-
+                       
                 FILTER(!isLiteral(?o) || lang(?o) = "en" || lang(?o) = "")
 
                 OPTIONAL {
                     ?p skos:prefLabel|rdfs:label ?ppl .
                     FILTER(!isLiteral(?o) || lang(?o) = "en" || lang(?o) = "")
                 }
-
-                OPTIONAL {
-                    ?o skos:prefLabel|rdfs:label ?opl .
-                    FILTER(!isLiteral(?o) || lang(?o) = "en" || lang(?o) = "")
-                }
+               
+                
             }
             """.replace("xxxx", collection_uri)
 
@@ -68,8 +65,11 @@ class OGCSPARQL(SPARQL):
                 s["provenance"] = val
             elif prop == "http://purl.org/dc/terms/source":
                 s["source"] = val
-            elif prop == "http://www.w3.org/ns/prov#wasDerivedFrom":
+            elif prop == "http://www.w3.org/2004/02/skos/core#inScheme":
                 s["wasDerivedFrom"] = val
+                vocab_uri = val
+            elif prop == "http://www.w3.org/ns/prov#wasDerivedFrom":
+                s["inScheme"] = val
             elif prop == "http://www.w3.org/2004/02/skos/core#member":
                 m.append(Property(prop, "Member", val, r["opl"]["value"]))
 
