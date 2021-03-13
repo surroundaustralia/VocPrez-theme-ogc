@@ -69,10 +69,10 @@ class OGCSPARQL(SPARQL):
             elif prop == "http://purl.org/dc/terms/source":
                 s["source"] = val
             elif prop == "http://www.w3.org/2004/02/skos/core#inScheme":
-                s["wasDerivedFrom"] = val
+                s["inScheme"] = val
                 vocab_uri = val
             elif prop == "http://www.w3.org/ns/prov#wasDerivedFrom":
-                s["inScheme"] = val
+                s["wasDerivedFrom"] = val
             elif prop == "http://www.w3.org/2004/02/skos/core#member":
                 m.append(Property(prop, "Member", val, r["opl"]["value"]))
 
