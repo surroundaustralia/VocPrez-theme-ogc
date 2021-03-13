@@ -25,15 +25,18 @@ class OGCSPARQL(SPARQL):
             WHERE {
                 <xxxx> a skos:Collection ;
                        ?p ?o .
-                       
+
                 FILTER(!isLiteral(?o) || lang(?o) = "en" || lang(?o) = "")
 
                 OPTIONAL {
                     ?p skos:prefLabel|rdfs:label ?ppl .
                     FILTER(!isLiteral(?o) || lang(?o) = "en" || lang(?o) = "")
                 }
-               
-                
+
+                OPTIONAL {
+                    ?o skos:prefLabel|rdfs:label ?opl .
+                    FILTER(!isLiteral(?o) || lang(?o) = "en" || lang(?o) = "")
+                }
             }
             """.replace("xxxx", collection_uri)
 
