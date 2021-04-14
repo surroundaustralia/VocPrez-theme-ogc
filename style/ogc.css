@@ -202,6 +202,7 @@ table.layout tbody tr:nth-child(even) {
 table.metadata th,
 table.metadata td {
     vertical-align: top;
+    text-align: left;
 }
 .altprof,
 .filter,
