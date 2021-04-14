@@ -25,6 +25,7 @@
     <div id="vp-menu">
       {% include 'nav.html' %}
     </div>
+    {% block breadcrumbs %}{% endblock %}
     <div id="main" style="display:grid; grid-template-columns: 1fr 250px;">
       {% block content %}{% endblock %}
     </div>

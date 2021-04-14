@@ -38,6 +38,7 @@ then
 else
       sed -i 's#$SPARQL_PASSWORD#'\"$SPARQL_PASSWORD\"'#' $VP_THEME_HOME/config_updated.py
 fi
+sed -i 's#$SYSTEM_BASE_URI#'"$SYSTEM_BASE_URI"'#' $VP_THEME_HOME/config_updated.py
 mv $VP_THEME_HOME/config_updated.py $VP_HOME/vocprez/_config/__init__.py
 
 echo "customisation done"
