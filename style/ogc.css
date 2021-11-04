@@ -424,6 +424,10 @@ table.metadata td {
     padding-right:5px;
 }
 
+.nestedobject {
+ background-color: lightblue;
+}
+
 /* support for embedded iframe content overrides */
 .iframe-embed {
     position: absolute;
