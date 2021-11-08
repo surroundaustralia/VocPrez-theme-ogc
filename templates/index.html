@@ -3,16 +3,19 @@
 
 {% block content %}
   <div style="grid-row: 1/2;">
-    <h1>Welcome to the OGC Community Application Profiles Server</h1>
-    <p>This is a research tool based on the OGC Definitions Server to publish community sourced profiles of OGC resources.</p>
+    <h1>Welcome to the OGC Definitions Server</h1>
     <p>The OGC Definitions Server publishes a range of resources managed by the OGC, and identified by unique stable web addresses (IRIs or URIs). These are determined through a set of policies managed by the OGC Naming Authority and managed through normal operational processes.</p>
-    <p>The knowledge graph behind the definitions server is flexible and extensible, the research tool supports publication of a range of related resources needed to describe interoperable data models.</p>
+    <p>The knowledge graph behind the definitions server is flexible and extensible, and the OGC will continue to register new terms and improve the cross-linkages between terms.</p>
     <p>Definitions are made available in an interoperable form using the <a href="https://www.w3.org/TR/skos-reference/">SKOS vocabulary</a> (or "taxonomy") model in both human- and machine-readable forms.</p>
-    <p>This repository supports richer information models based on the OWL language and the W3C Profiles Vocabulary, with alternative profiles of the content available to support different implementation platforms for these models, such as JSON-LD</p>
+    <p>Some definitions have richer information models with alternative profiles of the content available.</p>
+    <p>Vocabularies are managed in sets called "ConceptSchemes", and definitions can usually be accessed individually as "Concepts" or via the containing set.</p>
     <p>The "alternate profiles" will provide a complete list of the available resources per definition.<p>
-    <p>See the <a href="http://ogc.org/def-server">Definitions Server About Page</a> for more information about the OGC Definitions Server.</p>
+    <p>See the <a href="http://ogc.org/def-server">Definitions Server Home Page</a> for more information about the OGC Definitions Server.</p>
+     <p>for information on specific topics please try the <a href="/object?uri=http://www.opengis.net/def/about">About Topics</a> </p>
     {% if hierarchy is not none %}
-      <h3>ConceptScheme Hierarchy</h3>
+      <h3>Contents</h3>
+    <p>Content is organised into <em>Collections</em> by the source and governance domain.</p>
+      <p><em>Click the carets next to each Collection to expand</em></p>
       {{ render_concept_hierarchy(hierarchy)|safe }}
     {% endif %}
     <p>See <a href="{{ url_for('about') }}">About page</a> for more information about VocPrez.</p>
