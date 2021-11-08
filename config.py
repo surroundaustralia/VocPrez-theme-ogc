@@ -52,7 +52,7 @@ DATA_SOURCES = {
 }
 
 # BEGIN Vocabs list info
-VOCS_URI = "http://www.opengis.net/def"
-VOCS_TITLE = "OGC Vocabularies"
-VOCS_DESC = "Definitions registered by OGC standardisation activities or hosted on behalf of related organisations."
+VOCS_URI = "http://defs-dev.opengis.net/profiles"
+VOCS_TITLE = "Interoperability Profiles Register"
+VOCS_DESC = "Profiles of OGC and other standards used in conjunction with OGC specifications and publishing infrastructure."
 # END Vocabs list info
