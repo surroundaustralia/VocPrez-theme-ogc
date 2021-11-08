@@ -2,7 +2,7 @@
 VP_THEME_HOME="${VP_THEME_HOME:-/var/www/vocprez-profiles_skin}"
 VP_HOME="${VP_HOME:-/var/www/vocprez-profiles}"
 SPARQL_ENDPOINT="${SPARQL_ENDPOINT:-http://localhost:8080/rdf4j-server/repositories/profiles}"
-SYSTEM_URI_BASE: "http://defs-dev.opengis.net/profiles"
+SYSTEM_URI_BASE="http://defs-dev.opengis.net/profiles"
 
 # copy all style content to VP
 echo "copying $VP_THEME_HOME/style content to $VP_HOME/vocprez/view/style"
