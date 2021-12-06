@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-rows: 50px 100px auto 100px 300px 100px ;
+    grid-template-rows: 0px 80px auto 100px 300px 100px ;
     grid-template-areas:
         "search"
         "topmenu"
@@ -46,15 +46,14 @@ body {
 div#search {
     grid-area: search;
     background-color: #222;
-    padding: 10px 20% 10px 20%;
+    padding: 10px 20 10px 20%;
 }
 div#topmenu {
     grid-area: topmenu;
-    background-color: white;
-    padding: 10px 20% 10px 20%;
-
     border-bottom: 1px solid #e4e4e4;
     box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    background-image: linear-gradient(
+0deg, #00B1FF, #66E2FF);
 }
 #topmenu-links {
     float:right;
