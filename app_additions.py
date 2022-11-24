@@ -249,6 +249,7 @@ def index():
     q = """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         PREFIX policy: <http://www.opengis.net/def/metamodel/ogc-na/>
+	PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         SELECT DISTINCT ?parent ?parentlabel ?child ?childlabel
         WHERE {  
           BIND (<http://www.opengis.net/def> As ?this )
