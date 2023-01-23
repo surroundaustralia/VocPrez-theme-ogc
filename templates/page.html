@@ -5,7 +5,7 @@
   <title>{{ label }}</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='ogc.css') }}">
 </head>
-<body>
+<body data-base-url="{{ request.script_root|e }}">
   <div id="vocprez">
     made by <a href="http://github.com/rdflib/VocPrez">VocPrez</a>&nbsp;
     <a id="versionlink" href="https://github.com/RDFLib/VocPrez/releases/tag/{{ utils.version() }}">{{ utils.version() }}</a>
@@ -46,5 +46,6 @@
     </div>
   </div>
   <div id="footerblack"></div>
+  {% block bottomjs %}{% endblock %}
 </body>
 </html>
